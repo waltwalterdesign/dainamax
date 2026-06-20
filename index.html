@@ -1,0 +1,1284 @@
+<!doctype html>
+<html lang="lv" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DAINAMAX | Personalizētas Spirāles Piezīmju Grāmatiņas Māksliniekiem</title>
+    <!-- Google Fonts: Montserrat -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS Script CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              'velvet-dark': '#0A0A0A',
+              'velvet-light': '#111111',
+              'smoke': '#6B6B6B',
+              'rose': '#D98286',
+              'rose-hover': '#C96F74',
+              'blossom': '#F5E4E2',
+              'silk': '#E2D3CA',
+              'chiffon': '#FAF9F8',
+            },
+            fontFamily: {
+              sans: ['Montserrat', 'sans-serif'],
+              montserrat: ['Montserrat', 'sans-serif'],
+            }
+          }
+        }
+      }
+    </script>
+    
+    <!-- Custom Style Sheet (Replicating index.css + App.tsx requirements) -->
+    <style>
+      html {
+        scroll-behavior: smooth;
+        font-family: "Montserrat", sans-serif;
+      }
+      body {
+        background-color: #FAF9F8;
+        color: #0A0A0A;
+        font-family: "Montserrat", sans-serif;
+      }
+
+      /* Custom precise typography classes based on the requested design system scale */
+      .text-h1 {
+        font-family: "Montserrat", sans-serif;
+        font-size: 32px;
+        line-height: 40px;
+        font-weight: 700;
+        letter-spacing: -0.02em;
+      }
+      @media (min-width: 768px) {
+        .text-h1 {
+          font-size: 48px;
+          line-height: 56px;
+        }
+      }
+
+      .text-h2 {
+        font-family: "Montserrat", sans-serif;
+        font-size: 26px;
+        line-height: 34px;
+        font-weight: 600;
+        letter-spacing: -0.01em;
+      }
+      @media (min-width: 768px) {
+        .text-h2 {
+          font-size: 36px;
+          line-height: 44px;
+        }
+      }
+
+      .text-h3 {
+        font-family: "Montserrat", sans-serif;
+        font-size: 20px;
+        line-height: 28px;
+        font-weight: 600;
+      }
+      @media (min-width: 768px) {
+        .text-h3 {
+          font-size: 24px;
+          line-height: 32px;
+        }
+      }
+
+      .text-body-lg {
+        font-size: 18px;
+        line-height: 28px;
+        font-weight: 400;
+      }
+
+      .text-body {
+        font-size: 16px;
+        line-height: 24px;
+        font-weight: 400;
+      }
+
+      .btn-typography {
+        font-size: 14px;
+        font-weight: 600;
+        letter-spacing: 0.08em;
+      }
+
+      /* Notebook dots background pattern */
+      .dot-grid-pattern {
+        background-image: radial-gradient(#6b6b6b33 1.5px, transparent 1.5px);
+        background-size: 18px 18px;
+      }
+    </style>
+  </head>
+  <body class="bg-[#FAF9F8] text-[#0A0A0A] font-sans antialiased selection:bg-[#F5E4E2] selection:text-[#0A0A0A]">
+
+    <div class="min-h-screen bg-[#FAF9F8]">
+      
+      <!-- Premium Sticky Header -->
+      <header id="header" class="sticky top-0 z-50 bg-[#FAF9F8]/90 backdrop-blur-md border-b border-[#E2D3CA]/30 shadow-sm">
+        <div class="max-w-[1200px] mx-auto px-6 h-20 flex items-center justify-between">
+          
+          <!-- Logo -->
+          <a href="#" class="flex items-center group h-12 w-48 relative">
+            <img 
+              src="/src/assets/images/Dainamax_full_logo.svg" 
+              alt="DAINAMAX" 
+              class="h-full w-full object-contain object-left transition-transform duration-300 group-hover:scale-[1.02]" 
+            />
+          </a>
+
+          <!-- Desktop Navigation -->
+          <nav class="hidden lg:flex items-center space-x-10">
+            <a href="#hero" class="text-xs font-semibold tracking-wider text-[#6B6B6B] hover:text-[#0A0A0A] transition-colors duration-300 uppercase">Sākums</a>
+            <a href="#highlights" class="text-xs font-semibold tracking-wider text-[#6B6B6B] hover:text-[#0A0A0A] transition-colors duration-300 uppercase">Kāpēc mēs</a>
+            <a href="#mockup" class="text-xs font-semibold tracking-wider text-[#6B6B6B] hover:text-[#0A0A0A] transition-colors duration-300 uppercase">Makets</a>
+            <a href="#testimonials" class="text-xs font-semibold tracking-wider text-[#6B6B6B] hover:text-[#0A0A0A] transition-colors duration-300 uppercase">Atsauksmes</a>
+          </nav>
+
+          <!-- Header CTA -->
+          <div class="hidden lg:block">
+            <a 
+              href="https://dainamax.lv" 
+              target="_blank"
+              rel="noopener noreferrer"
+              class="px-6 py-3 bg-[#D98286] hover:bg-[#C96F74] text-white btn-typography rounded-full tracking-[0.08em] transition-all duration-300 inline-block text-xs font-semibold"
+            >
+              PASŪTĪT
+            </a>
+          </div>
+
+          <!-- Hamburger mobile button -->
+          <button 
+            id="mobile-menu-toggle"
+            class="lg:hidden p-2 text-[#0A0A0A] focus:outline-none"
+            aria-label="Toggle menu"
+          >
+            <svg id="menu-icon-open" class="w-6 h-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <line x1="3" y1="12" x2="21" y2="12"></line>
+              <line x1="3" y1="6" x2="21" y2="6"></line>
+              <line x1="3" y1="18" x2="21" y2="18"></line>
+            </svg>
+            <svg id="menu-icon-close" class="w-6 h-6 hidden" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <line x1="18" y1="6" x2="6" y2="18"></line>
+              <line x1="6" y1="6" x2="18" y2="18"></line>
+            </svg>
+          </button>
+        </div>
+
+        <!-- Mobile Navigation Drawer -->
+        <div id="mobile-drawer" class="lg:hidden fixed inset-0 top-20 bg-[#FAF9F8] z-40 px-6 py-8 flex flex-col justify-between border-t border-[#F5E4E2] transition-all duration-300 opacity-0 pointer-events-none translate-y-2">
+          <nav class="flex flex-col space-y-6">
+            <a href="#hero" class="mobile-nav-link text-sm font-semibold tracking-wider text-[#6B6B6B] hover:text-[#0A0A0A] uppercase">Sākums</a>
+            <a href="#highlights" class="mobile-nav-link text-sm font-semibold tracking-wider text-[#6B6B6B] hover:text-[#0A0A0A] uppercase">Kāpēc mēs</a>
+            <a href="#mockup" class="mobile-nav-link text-sm font-semibold tracking-wider text-[#6B6B6B] hover:text-[#0A0A0A] uppercase">Makets</a>
+            <a href="#testimonials" class="mobile-nav-link text-sm font-semibold tracking-wider text-[#6B6B6B] hover:text-[#0A0A0A] uppercase">Atsauksmes</a>
+          </nav>
+
+          <div class="pt-8 border-t border-[#F5E4E2]">
+            <a 
+              href="https://dainamax.lv" 
+              target="_blank"
+              rel="noopener noreferrer"
+              class="w-full block py-4 bg-[#D98286] hover:bg-[#C96F74] text-white btn-typography rounded-full text-center tracking-[0.08em]"
+            >
+              APSKATĪT VEIKALU
+            </a>
+          </div>
+        </div>
+      </header>
+
+      <!-- Hero Section -->
+      <section id="hero" class="relative min-h-[550px] lg:min-h-[680px] border-b border-[#F5E4E2]/40 flex items-center overflow-hidden">
+        <div class="absolute inset-0 z-0">
+          <img 
+            src="/src/assets/images/banners.png" 
+            alt="Dainamax Premium Notebook Background Banner" 
+            class="w-full h-full object-cover object-center"
+          />
+          <div class="absolute inset-y-0 left-0 w-full md:w-[60%] lg:w-[50%] bg-gradient-to-r from-[#FAF9F8] via-[#FAF9F8]/95 to-transparent hidden md:block"></div>
+          <div class="absolute inset-0 bg-[#FAF9F8]/90 md:hidden"></div>
+        </div>
+
+        <div class="relative z-10 w-full max-w-[1200px] mx-auto px-6 sm:px-12 py-16 lg:py-24">
+          <div class="max-w-[540px] flex flex-col space-y-8">
+            <h1 class="text-h1 text-[#0A0A0A] leading-tight font-extrabold">
+              Tavs dizains.<br />
+              <span class="text-[#D98286]">Tavs piezīmju stāsts.</span>
+            </h1>
+            <p class="text-body-lg text-[#6B6B6B] leading-relaxed">
+              Radīts tiem, kuru rokās dzimst vizuālā pasaule. Personalizēta spirāles grāmatiņa ar premium punktotām lapām, radot ideālu un nesamākslotu telpu Tavām skicēm, zīmējumiem un plāniem.
+            </p>
+            
+            <div class="flex flex-col sm:flex-row gap-4 pt-4">
+              <a 
+                href="#mockup" 
+                class="px-8 py-4 bg-[#D98286] hover:bg-[#C96F74] text-white btn-typography rounded-full tracking-[0.08em] transition-all duration-300 text-center hover:shadow-xl"
+              >
+                RADI SAVU GRĀMATIŅU
+              </a>
+            </div>
+
+            <!-- Premium details indicator inline -->
+            <div class="grid grid-cols-3 gap-4 pt-8 border-t border-[#F5E4E2] text-center sm:text-left">
+              <div>
+                <h4 class="font-montserrat font-bold text-[#0A0A0A] text-base">80g/m²</h4>
+                <p class="text-[#6B6B6B] text-[11px] font-medium mt-1">Premium papīrs</p>
+              </div>
+              <div>
+                <h4 class="font-montserrat font-bold text-[#0A0A0A] text-base">A5</h4>
+                <p class="text-[#6B6B6B] text-[11px] font-medium mt-1">Ērts formāts</p>
+              </div>
+              <div>
+                <h4 class="font-montserrat font-bold text-[#0A0A0A] text-base">Punktots režģis</h4>
+                <p class="text-[#6B6B6B] text-[11px] font-medium mt-1">Izcils formāts</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Highlights / Why Us Section -->
+      <section id="highlights" class="py-24 bg-white border-b border-[#F5E4E2]/25 relative">
+        <div class="max-w-[1200px] mx-auto px-6">
+          
+          <div class="text-right max-w-2xl ml-auto mb-16 flex flex-col space-y-4 items-end">
+            <h2 class="text-h2 text-[#0A0A0A] font-montserrat font-extrabold tracking-tight leading-tight">Kāpēc izvēlēties tieši šo?</h2>
+            <p class="text-sm text-[#6B6B6B] max-w-xl leading-relaxed">
+              Katrs elements ir rūpīgi pārdomāts un izstrādāts, lai sniegtu izcilu radošo brīvību un luksusa sajūtu katrā lapas šķautnē.
+            </p>
+            <div class="w-12 h-0.5 bg-[#D98286] mt-2"></div>
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            
+            <!-- Card 1 -->
+            <div class="bg-[linear-gradient(135deg,#D98286_0%,#F5E4E2_100%)] p-8 rounded-[11px] shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-1 text-left flex flex-col justify-between min-h-[220px] border border-[#E2D3CA]/20 relative overflow-hidden group">
+              <div class="relative z-10 max-w-[85%] pr-2">
+                <h3 class="text-h3 text-lg font-bold mb-3 text-[#0A0A0A]">Personalizēts dizains</h3>
+                <p class="text-xs text-[#0A0A0A]/85 leading-relaxed font-medium">
+                  Uzraksti savu vārdu, uzvārdu vai unikālu ilustrāciju vai logo. Piezīmju grāmatiņa, kas stāsta par Tavu personību.
+                </p>
+              </div>
+              <svg class="absolute right-0 translate-x-[40%] top-0 h-full w-auto text-[#FAF9F8] opacity-30 pointer-events-none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="4" y1="21" x2="4" y2="14"/><line x1="4" y1="10" x2="4" y2="3"/><line x1="12" y1="21" x2="12" y2="12"/><line x1="12" y1="8" x2="12" y2="3"/><line x1="20" y1="21" x2="20" y2="16"/><line x1="20" y1="12" x2="20" y2="3"/><line x1="2" y1="14" x2="6" y2="14"/><line x1="10" y1="8" x2="14" y2="8"/><line x1="18" y1="16" x2="22" y2="16"/>
+              </svg>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="bg-[linear-gradient(135deg,#D98286_0%,#F5E4E2_100%)] p-8 rounded-[11px] shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-1 text-left flex flex-col justify-between min-h-[220px] border border-[#E2D3CA]/20 relative overflow-hidden group">
+              <div class="relative z-10 max-w-[85%] pr-2">
+                <h3 class="text-h3 text-lg font-bold mb-3 text-[#0A0A0A]">Punktotas lapas</h3>
+                <p class="text-xs text-[#0A0A0A]/85 leading-relaxed font-medium">
+                  Māksliniekiem ideāls 5mm pelēkais punktu režģis nodrošina izcilu proporciju asumu bez līnijas uzbāzības un ierobežojumiem.
+                </p>
+              </div>
+              <svg class="absolute right-0 translate-x-[40%] top-0 h-full w-auto text-[#FAF9F8] opacity-30 pointer-events-none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/>
+              </svg>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="bg-[linear-gradient(135deg,#D98286_0%,#F5E4E2_100%)] p-8 rounded-[11px] shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-1 text-left flex flex-col justify-between min-h-[220px] border border-[#E2D3CA]/20 relative overflow-hidden group">
+              <div class="relative z-10 max-w-[85%] pr-2">
+                <h3 class="text-h3 text-lg font-bold mb-3 text-[#0A0A0A]">Premium papīrs</h3>
+                <p class="text-xs text-[#0A0A0A]/85 leading-relaxed font-medium">
+                  80g/m² biezs, izcilas kvalitātes gluds papīrs. Nodrošina maigu rakstīšanas virsmu un maksimāli novērš tintes caursūkšanos.
+                </p>
+              </div>
+              <svg class="absolute right-0 translate-x-[40%] top-0 h-full w-auto text-[#FAF9F8] opacity-30 pointer-events-none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="4" y1="21" x2="4" y2="14"/><line x1="4" y1="10" x2="4" y2="3"/><line x1="12" y1="21" x2="12" y2="12"/><line x1="12" y1="8" x2="12" y2="3"/><line x1="20" y1="21" x2="20" y2="16"/><line x1="20" y1="12" x2="20" y2="3"/><line x1="2" y1="14" x2="6" y2="14"/><line x1="10" y1="8" x2="14" y2="8"/><line x1="18" y1="16" x2="22" y2="16"/>
+              </svg>
+            </div>
+
+            <!-- Card 4 -->
+            <div class="bg-[linear-gradient(135deg,#D98286_0%,#F5E4E2_100%)] p-8 rounded-[11px] shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-1 text-left flex flex-col justify-between min-h-[220px] border border-[#E2D3CA]/20 relative overflow-hidden group">
+              <div class="relative z-10 max-w-[85%] pr-2">
+                <h3 class="text-h3 text-lg font-bold mb-3 text-[#0A0A0A]">Ideāla dāvana</h3>
+                <p class="text-xs text-[#0A0A0A]/85 leading-relaxed font-medium">
+                  Iesaiņota smalkā zīdpapīrā un minimālistiskā paku kastītē. Gatava iedvesmot katru zīmētāju, dizaineru vai dzejnieku.
+                </p>
+              </div>
+              <svg class="absolute right-0 translate-x-[40%] top-0 h-full w-auto text-[#FAF9F8] opacity-30 pointer-events-none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="3" y="8" width="18" height="4" rx="1"/><path d="M12 8v14"/><path d="M19 12v7a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2v-7"/><path d="M7.5 8a2.5 2.5 0 0 1 0-5A4.3 4.3 0 0 1 12 8a4.3 4.3 0 0 1 4.5-5 2.5 2.5 0 0 1 0 5"/>
+              </svg>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      <!-- Interactive Mockup Section -->
+      <section id="mockup" class="py-24 bg-[#FAF9F8] border-b border-[#F5E4E2]/25 relative overflow-hidden">
+        <div class="absolute right-[-100px] top-[20%] w-[350px] h-[350px] rounded-full bg-[#D98286]/3 blur-3xl pointer-events-none"></div>
+        <div class="absolute left-[-150px] bottom-[10%] w-[450px] h-[450px] rounded-full bg-[#E2D3CA]/15 blur-3xl pointer-events-none"></div>
+
+        <div class="max-w-[1200px] mx-auto px-6 relative">
+          
+          <div class="text-center max-w-2xl mx-auto mb-16 flex flex-col space-y-4">
+            <h2 class="text-h2 text-[#0A0A0A]">Makets</h2>
+            <p class="text-body text-[#6B6B6B]">Augšupielādē savu A5 dizainu un aplūko to fotoreālistiskā spirāles piezīmju grāmatiņas maketa trīs dažādās dabīgās vidēs.</p>
+            <div class="w-12 h-0.5 bg-[#D98286] mx-auto mt-2"></div>
+          </div>
+
+          <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-stretch">
+            
+            <!-- Left Column: Compact Action Panel -->
+            <div class="lg:col-span-5 flex flex-col justify-between space-y-4">
+              
+              <!-- Box 1: Design Uploader -->
+              <div class="p-4 bg-white border border-[#E2D3CA]/40 rounded-[12px] shadow-sm flex flex-col space-y-3 font-sans">
+                <div class="flex items-center justify-between">
+                  <h3 class="font-montserrat font-bold text-[11px] tracking-wider uppercase text-[#0A0A0A] flex items-center gap-1.5">
+                    1. Augšupielādē vāka dizainu (A5)
+                  </h3>
+                  <button 
+                    id="clear-design-btn"
+                    type="button" 
+                    class="text-[10px] font-bold text-red-500 hover:text-red-700 transition-colors uppercase tracking-wider flex items-center gap-1 hidden"
+                  >
+                    <svg class="w-3 h-3" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                      <path d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16" />
+                    </svg>
+                    Dzēst
+                  </button>
+                </div>
+
+                <div 
+                  id="design-uploader"
+                  class="border rounded-[8px] p-3 text-center transition-all duration-300 flex items-center justify-center cursor-pointer border-[#E2D3CA]/50 hover:border-[#D98286] bg-[#FAF9F8]/50"
+                  style="min-height: 64px;"
+                >
+                  <input 
+                    type="file" 
+                    id="file-input" 
+                    accept="image/png, image/jpeg, image/jpg" 
+                    class="hidden" 
+                  />
+                  
+                  <!-- Empty Uploader Representation -->
+                  <div id="uploader-empty" class="flex items-center space-x-3 w-full justify-center">
+                    <svg class="w-4 h-4 text-[#D98286] shrink-0" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                      <path stroke-linecap="round" stroke-linejoin="round" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-8l-4-4m0 0L8 8m4-4v12" />
+                    </svg>
+                    <div class="text-left font-sans">
+                      <p class="text-[11px] font-bold text-[#0A0A0A] uppercase tracking-wide">Pievieno JPG vai PNG</p>
+                      <p class="text-[9px] text-[#6B6B6B] font-medium leading-none mt-1">Sagatavo A5 izmērā: 1748 x 2480 px</p>
+                    </div>
+                  </div>
+
+                  <!-- Loaded Design Representation -->
+                  <div id="uploader-loaded" class="flex items-center justify-between w-full px-2 hidden">
+                    <div class="flex items-center space-x-2.5 overflow-hidden">
+                      <div class="w-8 h-10 rounded overflow-hidden border border-stone-200 bg-stone-100 shrink-0 flex-shrink-0">
+                        <img id="uploader-thumb" src="" alt="Thumbnail" class="w-full h-full object-cover" />
+                      </div>
+                      <div class="text-left overflow-hidden">
+                        <p id="uploader-filename" class="text-[11px] font-bold text-[#0A0A0A] truncate max-w-[140px]"></p>
+                        <p class="text-[9px] text-green-700 font-bold flex items-center gap-0.5 mt-0.5">
+                          <svg class="w-3 h-3 text-green-700 inline" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="3">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+                          </svg>
+                          Sagatavots
+                        </p>
+                      </div>
+                    </div>
+                    <span class="text-[10px] text-stone-400 font-semibold uppercase tracking-wider text-right shrink-0">Mainīt</span>
+                  </div>
+                </div>
+
+                <div id="upload-error-box" class="p-2.5 bg-red-50 text-red-700 text-[10px] font-semibold rounded-lg border border-red-100 text-left hidden"></div>
+              </div>
+
+              <!-- Box 2: Thumbnails Selector -->
+              <div class="p-4 bg-white border border-[#E2D3CA]/40 rounded-[12px] shadow-sm space-y-2.5">
+                <span class="text-[11px] font-montserrat font-bold text-[#0A0A0A] uppercase tracking-wider flex items-center gap-1">
+                  <span>2.</span> Izvēlies mockup šablonu
+                </span>
+                <div class="grid grid-cols-3 gap-3">
+                  
+                  <!-- Thumbnail 1 -->
+                  <button 
+                    id="btn-preset-mockup1"
+                    type="button"
+                    class="aspect-square rounded-[10px] border-2 overflow-hidden transition-all duration-300 relative group flex-shrink-0 bg-[#FAF9F8] border-[#D98286] shadow-md ring-4 ring-[#D98286]/10 scale-[1.02]"
+                  >
+                    <img src="/src/assets/images/mockup_01.png" alt="Mākslas Terrazzo" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105" />
+                    <div class="absolute bottom-0 inset-x-0 bg-stone-900/75 p-1 text-center pointer-events-none">
+                      <p class="text-[8px] font-bold text-white uppercase tracking-wider truncate">Terrazzo</p>
+                    </div>
+                    <div id="badge-mockup1" class="absolute top-1 right-1 bg-[#D98286] text-white p-0.5 rounded-full shadow z-10">
+                      <svg class="w-2.5 h-2.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="3">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+                      </svg>
+                    </div>
+                  </button>
+
+                  <!-- Thumbnail 2 -->
+                  <button 
+                    id="btn-preset-mockup2"
+                    type="button"
+                    class="aspect-square rounded-[10px] border-2 overflow-hidden transition-all duration-300 relative group flex-shrink-0 bg-[#FAF9F8] border-[#E2D3CA]/30 hover:border-[#D98286]/50 shadow-sm"
+                  >
+                    <img src="/src/assets/images/mockup_02.png" alt="Dizaina Ateljē" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105" />
+                    <div class="absolute bottom-0 inset-x-0 bg-stone-900/75 p-1 text-center pointer-events-none">
+                      <p class="text-[8px] font-bold text-white uppercase tracking-wider truncate">Ozola galds</p>
+                    </div>
+                    <div id="badge-mockup2" class="absolute top-1 right-1 bg-[#D98286] text-white p-0.5 rounded-full shadow z-10 hidden">
+                      <svg class="w-2.5 h-2.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="3">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+                      </svg>
+                    </div>
+                  </button>
+
+                  <!-- Thumbnail 3 -->
+                  <button 
+                    id="btn-preset-mockup3"
+                    type="button"
+                    class="aspect-square rounded-[10px] border-2 overflow-hidden transition-all duration-300 relative group flex-shrink-0 bg-[#FAF9F8] border-[#E2D3CA]/30 hover:border-[#D98286]/50 shadow-sm"
+                  >
+                    <img src="/src/assets/images/mockup_03.png" alt="Lina Rīts" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105" />
+                    <div class="absolute bottom-0 inset-x-0 bg-stone-900/75 p-1 text-center pointer-events-none">
+                      <p class="text-[8px] font-bold text-white uppercase tracking-wider truncate">Lina audums</p>
+                    </div>
+                    <div id="badge-mockup3" class="absolute top-1 right-1 bg-[#D98286] text-white p-0.5 rounded-full shadow z-10 hidden">
+                      <svg class="w-2.5 h-2.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="3">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+                      </svg>
+                    </div>
+                  </button>
+                </div>
+              </div>
+
+              <!-- Box 3: Calibration Sliders -->
+              <div class="p-4 bg-white border border-[#E2D3CA]/40 rounded-[12px] shadow-sm space-y-3">
+                <div class="flex items-center justify-between">
+                  <h3 class="font-montserrat font-bold text-[11px] tracking-wider uppercase text-[#0A0A0A] flex items-center gap-1">
+                    3. Kalibrēt novietojumu
+                  </h3>
+                  <button
+                    id="btn-reset-sliders"
+                    type="button"
+                    class="text-[10px] font-bold text-[#D98286] hover:text-[#C96F74] transition-colors uppercase tracking-wider"
+                  >
+                    Atiestatīt
+                  </button>
+                </div>
+
+                <div class="grid grid-cols-2 gap-3 pt-0.5">
+                  <div class="bg-[#FAF9F8]/65 p-2 rounded-lg border border-stone-100">
+                    <div class="flex justify-between text-[10px] font-bold text-[#0A0A0A] mb-1">
+                      <span>Horiz. pos (X)</span>
+                      <span id="label-pos-x" class="font-mono text-[#D98286]">29.7%</span>
+                    </div>
+                    <input
+                      id="input-pos-x"
+                      type="range"
+                      min="0"
+                      max="100"
+                      step="0.1"
+                      value="29.7"
+                      class="w-full accent-[#D98286] h-1 bg-stone-200 rounded-lg appearance-none cursor-pointer"
+                    />
+                  </div>
+
+                  <div class="bg-[#FAF9F8]/65 p-2 rounded-lg border border-stone-100">
+                    <div class="flex justify-between text-[10px] font-bold text-[#0A0A0A] mb-1">
+                      <span>Vert. pos (Y)</span>
+                      <span id="label-pos-y" class="font-mono text-[#D98286]">25.3%</span>
+                    </div>
+                    <input
+                      id="input-pos-y"
+                      type="range"
+                      min="0"
+                      max="100"
+                      step="0.1"
+                      value="25.3"
+                      class="w-full accent-[#D98286] h-1 bg-stone-200 rounded-lg appearance-none cursor-pointer"
+                    />
+                  </div>
+
+                  <div class="bg-[#FAF9F8]/65 p-2 rounded-lg border border-stone-100">
+                    <div class="flex justify-between text-[10px] font-bold text-[#0A0A0A] mb-1">
+                      <span>Mērogs (Platums)</span>
+                      <span id="label-scale" class="font-mono text-[#D98286]">48.9%</span>
+                    </div>
+                    <input
+                      id="input-scale"
+                      type="range"
+                      min="10"
+                      max="90"
+                      step="0.1"
+                      value="48.9"
+                      class="w-full accent-[#D98286] h-1 bg-stone-200 rounded-lg appearance-none cursor-pointer"
+                    />
+                  </div>
+
+                  <div class="bg-[#FAF9F8]/65 p-2 rounded-lg border border-stone-100">
+                    <div class="flex justify-between text-[10px] font-bold text-[#0A0A0A] mb-1">
+                      <span>Rotācija</span>
+                      <span id="label-rotate" class="font-mono text-[#D98286]">0.0°</span>
+                    </div>
+                    <input
+                      id="input-rotate"
+                      type="range"
+                      min="-45"
+                      max="45"
+                      step="0.5"
+                      value="0.0"
+                      class="w-full accent-[#D98286] h-1 bg-stone-200 rounded-lg appearance-none cursor-pointer"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Right Column: Immersive Front-View Mockup Canvas -->
+            <div class="lg:col-span-7 flex flex-col justify-start relative">
+              
+              <div 
+                id="mockup-canvas-wrapper"
+                class="w-full max-w-[420px] mx-auto aspect-[3/4] rounded-[16px] shadow-2xl relative overflow-hidden bg-[#FAF9F8] border border-[#E2D3CA]/30 flex items-center justify-center transition-all duration-75 group/preview cursor-zoom-in"
+              >
+                <!-- Zoom Overlay hint -->
+                <div class="absolute inset-0 bg-black/0 hover:bg-black/15 transition-colors duration-300 flex items-center justify-center z-25">
+                  <div class="opacity-0 group-hover/preview:opacity-100 bg-white/95 text-[#0A0A0A] font-montserrat font-bold text-[10px] uppercase tracking-widest py-2.5 px-4 rounded-full shadow-lg flex items-center gap-2 transform translate-y-2 group-hover/preview:translate-y-0 transition-all duration-300 pointer-events-none">
+                    <svg class="w-3.5 h-3.5 text-[#D98286]" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                      <path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                      <path stroke-linecap="round" stroke-linejoin="round" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
+                    </svg>
+                    Tuvināt skatu
+                  </div>
+                </div>
+
+                <!-- Base Mockup Template image -->
+                <img 
+                  id="main-mockup-bg"
+                  src="/src/assets/images/mockup_01.png" 
+                  alt="Front-view mockup background template" 
+                  class="absolute inset-0 w-full h-full object-cover select-none pointer-events-none transition-all duration-500"
+                />
+
+                <!-- Design mapped layer -->
+                <div 
+                  id="mapped-design-overlay"
+                  style="left: 29.7%; top: 25.3%; width: 48.9%; aspect-ratio: 1748/2480; transform: rotate(0deg); mix-blend-mode: multiply;"
+                  class="absolute overflow-hidden pointer-events-none transition-all duration-75 flex items-center justify-center rounded-[1%]"
+                >
+                  <img 
+                    id="mapped-design-img"
+                    src="/src/assets/images/notebook_cover_1781435812496.jpg" 
+                    alt="Piezīmju grāmatiņas vāka dizains" 
+                    style="mix-blend-mode: multiply;"
+                    class="w-full h-full object-cover transition-all duration-300"
+                  />
+                </div>
+              </div>
+
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      <!-- Zoom Closeup Lightbox Modal -->
+      <div 
+        id="zoom-modal"
+        class="fixed inset-0 z-[100] bg-stone-950/80 backdrop-blur-md flex items-center justify-center p-4 cursor-zoom-out opacity-0 pointer-events-none transition-all duration-300"
+      >
+        <div 
+          id="zoom-modal-container"
+          class="relative w-full max-w-[500px] aspect-[3/4] bg-white rounded-[20px] overflow-hidden shadow-2xl border border-white/10"
+        >
+          <!-- Base Mockup Background -->
+          <img 
+            id="zoom-bg-img"
+            src="/src/assets/images/mockup_01.png" 
+            alt="Zoomed detailed perspective view" 
+            class="absolute inset-0 w-full h-full object-cover select-none pointer-events-none"
+          />
+
+          <!-- Calibrated Design Image Overlay -->
+          <div 
+            id="zoom-design-overlay"
+            style="left: 29.7%; top: 25.3%; width: 48.9%; aspect-ratio: 1748/2480; transform: rotate(0deg); mix-blend-mode: multiply;"
+            class="absolute overflow-hidden pointer-events-none transition-all duration-75 flex items-center justify-center rounded-[1%]"
+          >
+            <img 
+              id="zoom-design-img"
+              src="/src/assets/images/notebook_cover_1781435812496.jpg" 
+              alt="Piezīmju grāmatiņas vāka dizains" 
+              style="mix-blend-mode: multiply;"
+              class="w-full h-full object-cover"
+            />
+          </div>
+
+          <!-- UI tags -->
+          <div class="absolute top-4 left-4 bg-black/60 backdrop-blur-md text-white text-[10px] font-bold uppercase tracking-wider py-1.5 px-3 rounded-full flex items-center gap-1.5 pointer-events-none">
+            <svg class="w-3 h-3 text-[#D98286] inline-block" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="m11.049 2.927 3 3m0 0 6 6m-6-6H9a2 2 0 0 0-2 2v1h-1a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2z" />
+            </svg>
+            Tuvplāna skats
+          </div>
+
+          <!-- Close button -->
+          <button 
+            id="zoom-close-btn"
+            type="button"
+            class="absolute top-4 right-4 bg-black/65 hover:bg-black/80 backdrop-blur-md text-white p-2.5 rounded-full transition-all border border-white/10 flex items-center justify-center cursor-pointer shadow-lg"
+          >
+            <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+            </svg>
+          </button>
+        </div>
+      </div>
+
+      <!-- Details Section with Infogram -->
+      <section 
+        id="details" 
+        class="py-24 relative overflow-hidden bg-cover bg-center border-y border-[#E2D3CA]/30"
+        style="background-image: url('/src/assets/images/info.png')"
+      >
+        <div class="relative z-10 max-w-[1200px] mx-auto px-6">
+          
+          <div class="text-left max-w-[800px] mr-auto mb-16 flex flex-col space-y-4 items-start">
+            <h2 class="text-h2 text-[#0A0A0A] font-montserrat font-extrabold tracking-tight leading-tight">
+              Arhitekta tīrais audekls
+            </h2>
+            <p class="text-sm text-[#6B6B6B] max-w-xl leading-relaxed">
+              Tehniski pilnveidota un estētiska piezīmju grāmata ar augstākās klases materiālu savienojumu Tavai ikdienas izcilībai un jaunajiem mērķiem.
+            </p>
+            <div class="w-12 h-0.5 bg-[#D98286] mt-2"></div>
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 text-left">
+            
+            <!-- Card 1 -->
+            <div class="bg-[linear-gradient(135deg,#D98286_0%,#F5E4E2_100%)] p-8 rounded-[11px] shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-1 text-left flex flex-col justify-between min-h-[220px] border border-[#E2D3CA]/20 relative overflow-hidden group">
+              <div class="relative z-10 max-w-[85%] pr-2">
+                <h3 class="text-h3 text-lg font-bold mb-3 text-[#0A0A0A]">Kompakts A5 izmērs</h3>
+                <p class="text-xs text-[#0A0A0A]/85 leading-relaxed font-medium">
+                  148 x 210 mm formāts nodrošina nevainojamu līdzsvaru starp plašu radošo laukumu un ērti pārnēsājamu izmēru ikdienas gaitām.
+                </p>
+              </div>
+              <svg class="absolute right-0 translate-x-[40%] top-0 h-full w-auto text-[#FAF9F8] opacity-30 pointer-events-none" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
+              </svg>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="bg-[linear-gradient(135deg,#D98286_0%,#F5E4E2_100%)] p-8 rounded-[11px] shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-1 text-left flex flex-col justify-between min-h-[220px] border border-[#E2D3CA]/20 relative overflow-hidden group">
+              <div class="relative z-10 max-w-[85%] pr-2">
+                <h3 class="text-h3 text-lg font-bold mb-3 text-[#0A0A0A]">Premium 80g/m² papīrs</h3>
+                <p class="text-xs text-[#0A0A0A]/85 leading-relaxed font-medium">
+                  Augstākās kvalitātes papīra materiāls ar gludu virsmu, kas būtiski samazina tintes caursūkšanos visiem populārajiem rakstāmrīkiem.
+                </p>
+              </div>
+              <svg class="absolute right-0 translate-x-[40%] top-0 h-full w-auto text-[#FAF9F8] opacity-30 pointer-events-none" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" />
+              </svg>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="bg-[linear-gradient(135deg,#D98286_0%,#F5E4E2_100%)] p-8 rounded-[11px] shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-1 text-left flex flex-col justify-between min-h-[220px] border border-[#E2D3CA]/20 relative overflow-hidden group">
+              <div class="relative z-10 max-w-[85%] pr-2">
+                <h3 class="text-h3 text-lg font-bold mb-3 text-[#0A0A0A]">Izturīgs stiprinājums</h3>
+                <p class="text-xs text-[#0A0A0A]/85 leading-relaxed font-medium">
+                  Masīva un rūpīgi veidota metāla mugurkaula spirāle garantē konstrukcijas ilgmūžību un iespēju fiksēt un pārlocīt lapas pa 360 grādiem.
+                </p>
+              </div>
+              <svg class="absolute right-0 translate-x-[40%] top-0 h-full w-auto text-[#FAF9F8] opacity-30 pointer-events-none" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4" />
+              </svg>
+            </div>
+
+            <!-- Card 4 -->
+            <div class="bg-[linear-gradient(135deg,#D98286_0%,#F5E4E2_100%)] p-8 rounded-[11px] shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-1 text-left flex flex-col justify-between min-h-[220px] border border-[#E2D3CA]/20 relative overflow-hidden group">
+              <div class="relative z-10 max-w-[85%] pr-2">
+                <h3 class="text-h3 text-lg font-bold mb-3 text-[#0A0A0A]">Precīzs punktu tīkls</h3>
+                <p class="text-xs text-[#0A0A0A]/85 leading-relaxed font-medium">
+                  Neuzkrītošs gaiši pelēks punktotais režģis (5 mm) sniedz skaidras vadlīnijas taisnām līnijām un skicēm, neapgrūtinot lapas tīrību.
+                </p>
+              </div>
+              <svg class="absolute right-0 translate-x-[40%] top-0 h-full w-auto text-[#FAF9F8] opacity-30 pointer-events-none" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8" />
+              </svg>
+            </div>
+
+          </div>
+
+        </div>
+      </section>
+
+      <!-- Use Cases Section -->
+      <section id="usecases" class="py-24 bg-[#FAF9F8] relative">
+        <div class="max-w-[1200px] mx-auto px-6">
+          
+          <div class="text-center max-w-2xl mx-auto mb-16 flex flex-col space-y-4">
+            <h2 class="text-h2 text-[#0A0A0A]">Viens rīks, bezgalīgas iespējas</h2>
+            <div class="w-12 h-0.5 bg-[#D98286] mx-auto"></div>
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            
+            <!-- Use Case 1 -->
+            <div class="bg-[linear-gradient(135deg,#D98286_0%,#F5E4E2_100%)] p-8 rounded-[11px] shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-1 text-left flex flex-col justify-between min-h-[220px] border border-[#E2D3CA]/20 relative overflow-hidden group">
+              <div class="relative z-10 max-w-[85%] pr-2">
+                <h3 class="text-h3 text-lg font-bold mb-3 text-[#0A0A0A]">Skicēšanai</h3>
+                <p class="text-xs text-[#0A0A0A]/85 leading-relaxed font-medium">
+                  Premium luksusa papīra virsma ideāli slīd zem zīmuļa, laineriem vai ogles. Izbaudi pilnīgu radīšanas brīvību bez tintes izplūšanas.
+                </p>
+              </div>
+              <svg class="absolute right-0 translate-x-[40%] top-0 h-full w-auto text-[#FAF9F8] opacity-30 pointer-events-none" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4" />
+              </svg>
+            </div>
+
+            <!-- Use Case 2 -->
+            <div class="bg-[linear-gradient(135deg,#D98286_0%,#F5E4E2_100%)] p-8 rounded-[11px] shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-1 text-left flex flex-col justify-between min-h-[220px] border border-[#E2D3CA]/20 relative overflow-hidden group">
+              <div class="relative z-10 max-w-[85%] pr-2">
+                <h3 class="text-h3 text-lg font-bold mb-3 text-[#0A0A0A]">Sarakstiem</h3>
+                <p class="text-xs text-[#0A0A0A]/85 leading-relaxed font-medium">
+                  Punktainas lapas palīdz viegli un perfekti zīmēt trackerus, mēneša plānus, logrīkus un kalendāru lapas.
+                </p>
+              </div>
+              <svg class="absolute right-0 translate-x-[40%] top-0 h-full w-auto text-[#FAF9F8] opacity-30 pointer-events-none" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
+              </svg>
+            </div>
+
+            <!-- Use Case 3 -->
+            <div class="bg-[linear-gradient(135deg,#D98286_0%,#F5E4E2_100%)] p-8 rounded-[11px] shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-1 text-left flex flex-col justify-between min-h-[220px] border border-[#E2D3CA]/20 relative overflow-hidden group">
+              <div class="relative z-10 max-w-[85%] pr-2">
+                <h3 class="text-h3 text-lg font-bold mb-3 text-[#0A0A0A]">Plānošanai</h3>
+                <p class="text-xs text-[#0A0A0A]/85 leading-relaxed font-medium">
+                  Atstāj aizmugurē datētus un nogurdinošus plānotājus. Strukturē savas dienas, projektus un biznesa piezīmes bez stīviem nosacījumiem.
+                </p>
+              </div>
+              <svg class="absolute right-0 translate-x-[40%] top-0 h-full w-auto text-[#FAF9F8] opacity-30 pointer-events-none" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8" />
+              </svg>
+            </div>
+
+            <!-- Use Case 4 -->
+            <div class="bg-[linear-gradient(135deg,#D98286_0%,#F5E4E2_100%)] p-8 rounded-[11px] shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-1 text-left flex flex-col justify-between min-h-[220px] border border-[#E2D3CA]/20 relative overflow-hidden group">
+              <div class="relative z-10 max-w-[85%] pr-2">
+                <h3 class="text-h3 text-lg font-bold mb-3 text-[#0A0A0A]">Dāvināšanai</h3>
+                <p class="text-xs text-[#0A0A0A]/85 leading-relaxed font-medium">
+                  Personalizēts dāvanas pieskāriens ir neaizvietojams. Uzdāvini īpašu koptu piezīmju grāmatiņu mīļam draugam vai kolēģim.
+                </p>
+              </div>
+              <svg class="absolute right-0 translate-x-[40%] top-0 h-full w-auto text-[#FAF9F8] opacity-30 pointer-events-none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <rect x="3" y="8" width="18" height="4" rx="1"/><path d="M12 8v14"/><path d="M19 12v7a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2v-7"/><path d="M7.5 8a2.5 2.5 0 0 1 0-5A4.3 4.3 0 0 1 12 8a4.3 4.3 0 0 1 4.5-5 2.5 2.5 0 0 1 0 5"/>
+              </svg>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      <!-- Testimonials Section -->
+      <section id="testimonials" class="py-24 bg-white relative">
+        <div class="max-w-[1200px] mx-auto px-6">
+          
+          <div class="text-right max-w-2xl ml-auto mb-16 flex flex-col space-y-4 items-end">
+            <h2 class="text-h2 text-[#0A0A0A] font-montserrat font-extrabold tracking-tight leading-tight">Ko saka mūsu klienti</h2>
+            <p class="text-sm text-[#6B6B6B] max-w-xl leading-relaxed">
+              Mūsu lielākais lepnums ir redzēt klientu panākumus un iedvesmas pilnos mirkļus, ko pavada viņu unikālās piezīmes un skices.
+            </p>
+            <div class="w-12 h-0.5 bg-[#D98286] mt-2"></div>
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            
+            <!-- Testimonial 1 -->
+            <div class="bg-[linear-gradient(135deg,#D98286_0%,#F5E4E2_100%)] p-8 rounded-[11px] shadow-sm flex flex-col justify-between border border-[#D98286]/10 hover:shadow-xl transition-all duration-300">
+              <div class="space-y-4">
+                <div class="flex text-[#0A0A0A] space-x-1">
+                  <span class="text-xs">★</span><span class="text-xs">★</span><span class="text-xs">★</span><span class="text-xs">★</span><span class="text-xs">★</span>
+                </div>
+                <p class="text-xs text-[#0A0A0A]/85 italic leading-relaxed font-medium">
+                  "Beidot papīrs, kas nebaidās no manām tintēm un zīmuļiem! Personalizācijas iespējas un blossom tonis vākam izskatās tik eleganti un grezni. Pasūtīšu noteikti vēl."
+                </p>
+              </div>
+              <div class="pt-6 border-t border-[#0A0A0A]/10 mt-6 flex items-center space-x-3">
+                <div class="w-9 h-9 rounded-full bg-white flex items-center justify-center font-bold text-[#D98286] text-xs shadow-sm shadow-[#D98286]/20">
+                  PS
+                </div>
+                <div>
+                  <h5 class="font-montserrat font-bold text-xs text-[#0A0A0A] tracking-wider uppercase">Paula S.</h5>
+                </div>
+              </div>
+            </div>
+
+            <!-- Testimonial 2 -->
+            <div class="bg-[linear-gradient(135deg,#D98286_0%,#F5E4E2_100%)] p-8 rounded-[11px] shadow-sm flex flex-col justify-between border border-[#D98286]/10 hover:shadow-xl transition-all duration-300">
+              <div class="space-y-4">
+                <div class="flex text-[#0A0A0A] space-x-1">
+                  <span class="text-xs">★</span><span class="text-xs">★</span><span class="text-xs">★</span><span class="text-xs">★</span><span class="text-xs">★</span>
+                </div>
+                <p class="text-xs text-[#0A0A0A]/85 italic leading-relaxed font-medium">
+                  "Izturīgā metāla spirāle un klātais punktotais režģis ir mans galvenais atbalsts ceļojot. Klade pilnībā atveras un paliek plakana. Kvalitāte jūtama ikkatrā rindiņā un pieskārienā."
+                </p>
+              </div>
+              <div class="pt-6 border-t border-[#0A0A0A]/10 mt-6 flex items-center space-x-3">
+                <div class="w-9 h-9 rounded-full bg-white flex items-center justify-center font-bold text-[#D98286] text-xs shadow-sm shadow-[#D98286]/20">
+                  RK
+                </div>
+                <div>
+                  <h5 class="font-montserrat font-bold text-xs text-[#0A0A0A] tracking-wider uppercase">Roberts K.</h5>
+                </div>
+              </div>
+            </div>
+
+            <!-- Testimonial 3 -->
+            <div class="bg-[linear-gradient(135deg,#D98286_0%,#F5E4E2_100%)] p-8 rounded-[11px] shadow-sm flex flex-col justify-between border border-[#D98286]/10 hover:shadow-xl transition-all duration-300">
+              <div class="space-y-4">
+                <div class="flex text-[#0A0A0A] space-x-1">
+                  <span class="text-xs">★</span><span class="text-xs">★</span><span class="text-xs">★</span><span class="text-xs">★</span><span class="text-xs">★</span>
+                </div>
+                <p class="text-xs text-[#0A0A0A]/85 italic leading-relaxed font-medium">
+                  "Sveicieni no manas studijas! Es regulāri dāvināju šīs klades saviem radošajiem draugiem. Iespēja uzrakstīt viņu vārdu elegantā rakstā padara to par neaizmirstamu dāvanu!"
+                </p>
+              </div>
+              <div class="pt-6 border-t border-[#0A0A0A]/10 mt-6 flex items-center space-x-3">
+                <div class="w-9 h-9 rounded-full bg-white flex items-center justify-center font-bold text-[#D98286] text-xs shadow-sm shadow-[#D98286]/20">
+                  ML
+                </div>
+                <div>
+                  <h5 class="font-montserrat font-bold text-xs text-[#0A0A0A] tracking-wider uppercase">Marta L.</h5>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      <!-- Inspired Call to Action Section -->
+      <section class="py-24 bg-[#FAF9F8] relative border-t border-[#E2D3CA]/30 overflow-hidden">
+        <div class="absolute inset-0 opacity-[0.25] pointer-events-none" style="background-image: radial-gradient(#D98286 1px, transparent 1px); background-size: 24px 24px;"></div>
+        <div class="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-[#F5E4E2]/25 rounded-full blur-3xl pointer-events-none"></div>
+
+        <div class="max-w-[1100px] mx-auto px-6 relative z-10 text-center">
+          <div class="bg-white border border-[#E2D3CA]/50 rounded-[20px] p-12 md:p-16 shadow-xl max-w-3xl mx-auto flex flex-col items-center space-y-8 animate-fade-in">
+            
+            <h1 class="text-4xl md:text-5xl lg:text-6xl font-montserrat font-extrabold tracking-tight text-[#0A0A0A] leading-tight">
+              Gatavs radīt savu nākamo šedevru?
+            </h1>
+            
+            <p class="text-[#6B6B6B] text-base leading-relaxed font-medium max-w-xl">
+              Personalizē savu kladi, izvēlies luksusa zelta spiedumu un baudi augstākā mēroga papīra kvalitāti ikdienas radīšanā. Sāc savu jauno stāstu jau šodien ar ērtu un ātru piegādi visā Latvijā!
+            </p>
+
+            <div class="pt-2">
+              <a 
+                href="https://dainamax.lv" 
+                target="_blank"
+                rel="noopener noreferrer"
+                class="inline-flex px-10 py-5 bg-[#D98286] hover:bg-[#C96F74] text-white btn-typography rounded-full tracking-[0.11em] transition-all duration-300 shadow-md hover:shadow-xl hover:-translate-y-0.5 font-montserrat font-bold text-sm uppercase"
+              >
+                RADI SAVU PIEZĪMJU GRĀMATU
+              </a>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      <!-- Footer -->
+      <footer class="bg-[#0A0A0A] text-[#FAF9F8] py-16 border-t border-[#111111] relative overflow-hidden">
+        <div class="absolute top-0 right-0 w-80 h-80 bg-[#D98286]/10 rounded-full blur-3xl"></div>
+        
+        <div class="max-w-[1200px] mx-auto px-6 relative">
+          <div class="grid grid-cols-1 md:grid-cols-4 gap-12 pb-12 border-b border-[#FAF9F8]/10">
+            
+            <!-- Branding Column -->
+            <div class="md:col-span-2 space-y-4">
+              <div class="flex items-center h-12 w-48 relative">
+                <img 
+                  src="/src/assets/images/Dainamax_full_logo.svg" 
+                  alt="DAINAMAX" 
+                  class="h-full w-full object-contain object-left filter brightness-0 invert pointer-events-none" 
+                />
+              </div>
+              <p class="text-xs text-[#6B6B6B] leading-relaxed max-w-sm">
+                Rūpīgi izstrādātas un personalizētas spirāļu piezīmju grāmatiņas, kas palīdz māksliniekiem un radošiem prātiem vizualizēt savas idejas uz augstākās kvalitātes papīra.
+              </p>
+              <div class="text-xs text-[#6B6B6B] pt-2">
+                © <span id="footer-year">2026</span> DAINAMAX. Visas tiesības aizsargātas.
+              </div>
+            </div>
+
+            <!-- Links Column -->
+            <div>
+              <h5 class="font-montserrat font-bold text-xs text-white uppercase tracking-wider mb-4">Saites</h5>
+              <ul class="space-y-2.5">
+                <li><a href="#hero" class="text-xs text-[#6B6B6B] hover:text-white transition-colors duration-300">Sākums</a></li>
+                <li><a href="#mockup" class="text-xs text-[#6B6B6B] hover:text-white transition-colors duration-300">Makets</a></li>
+                <li><a href="#highlights" class="text-xs text-[#6B6B6B] hover:text-white transition-colors duration-300">Kāpēc mēs</a></li>
+                <li><a href="#testimonials" class="text-xs text-[#6B6B6B] hover:text-white transition-colors duration-300">Atsauksmes</a></li>
+              </ul>
+            </div>
+
+            <!-- Social / Contact Column -->
+            <div class="space-y-4">
+              <h5 class="font-montserrat font-bold text-xs text-white uppercase tracking-wider mb-4 font-semibold">Mēs esam šeit</h5>
+              <ul class="space-y-2.5">
+                <li>
+                  <a href="https://www.dainamax.lv" target="_blank" rel="noopener noreferrer" class="text-xs text-[#6B6B6B] hover:text-white transition-colors duration-300 flex items-center gap-1.5">
+                    www.dainamax.lv
+                  </a>
+                </li>
+                <li class="text-xs text-[#6B6B6B]">Instagram: <span class="text-white"><a href="https://www.instagram.com/dainamaxstudio/" target="_blank" rel="noopener noreferrer" class="text-xs text-[#6B6B6B] hover:text-white transition-colors duration-300 flex items-center gap-1.5">@dainamaxstudio</a></span></li>
+                <li class="text-xs text-[#6B6B6B]">TikTok: <span class="text-white"><a href="https://www.tiktok.com/@dainamax_" target="_blank" rel="noopener noreferrer" class="text-xs text-[#6B6B6B] hover:text-white transition-colors duration-300 flex items-center gap-1.5">@dainamax_</a></span></li>
+              </ul>
+            </div>
+
+          </div>
+        </div>
+      </footer>
+
+    </div>
+
+    <!-- Self-contained Vanilla JS logic -->
+    <script>
+      document.addEventListener('DOMContentLoaded', () => {
+        // Mobile drawer state
+        const mobileToggleBtn = document.getElementById('mobile-menu-toggle');
+        const mobileDrawer = document.getElementById('mobile-drawer');
+        const menuIconOpen = document.getElementById('menu-icon-open');
+        const menuIconClose = document.getElementById('menu-icon-close');
+        const mobileLinks = document.querySelectorAll('.mobile-nav-link');
+
+        let isMobileMenuOpen = false;
+
+        function toggleMobileMenu(open) {
+          isMobileMenuOpen = typeof open === 'boolean' ? open : !isMobileMenuOpen;
+          if (isMobileMenuOpen) {
+            menuIconOpen.classList.add('hidden');
+            menuIconClose.classList.remove('hidden');
+            mobileDrawer.classList.remove('opacity-0', 'pointer-events-none', 'translate-y-2');
+            mobileDrawer.classList.add('opacity-100', 'pointer-events-auto', 'translate-y-0');
+          } else {
+            menuIconOpen.classList.remove('hidden');
+            menuIconClose.classList.add('hidden');
+            mobileDrawer.classList.add('opacity-0', 'pointer-events-none', 'translate-y-2');
+            mobileDrawer.classList.remove('opacity-100', 'pointer-events-auto', 'translate-y-0');
+          }
+        }
+
+        if (mobileToggleBtn) {
+          mobileToggleBtn.addEventListener('click', () => toggleMobileMenu());
+        }
+
+        mobileLinks.forEach(link => {
+          link.addEventListener('click', () => toggleMobileMenu(false));
+        });
+
+        // Presets mapping with coordinate offsets exactly matching mapPresets of App.tsx
+        const mapPresets = {
+          mockup1: { x: 29.7, y: 25.3, w: 48.9, rot: 0.0, bg: '/src/assets/images/mockup_01.png' },
+          mockup2: { x: 29.7, y: 24.0, w: 48.4, rot: -2.0, bg: '/src/assets/images/mockup_02.png' },
+          mockup3: { x: 31.0, y: 37.2, w: 43.7, rot: -23.5, bg: '/src/assets/images/mockup_03.png' }
+        };
+
+        let selectedMockup = 'mockup1';
+        let posX = mapPresets.mockup1.x;
+        let posY = mapPresets.mockup1.y;
+        let overlayW = mapPresets.mockup1.w;
+        let rotAngle = mapPresets.mockup1.rot;
+        
+        let uploadedDesignData = null; 
+
+        // DOM Elements
+        const btnMockup1 = document.getElementById('btn-preset-mockup1');
+        const btnMockup2 = document.getElementById('btn-preset-mockup2');
+        const btnMockup3 = document.getElementById('btn-preset-mockup3');
+
+        const badgeMockup1 = document.getElementById('badge-mockup1');
+        const badgeMockup2 = document.getElementById('badge-mockup2');
+        const badgeMockup3 = document.getElementById('badge-mockup3');
+
+        const mainMockupBg = document.getElementById('main-mockup-bg');
+        const mappedDesignOverlay = document.getElementById('mapped-design-overlay');
+        const mappedDesignImg = document.getElementById('mapped-design-img');
+
+        const zoomBgImg = document.getElementById('zoom-bg-img');
+        const zoomDesignOverlay = document.getElementById('zoom-design-overlay');
+        const zoomDesignImg = document.getElementById('zoom-design-img');
+
+        const inputPosX = document.getElementById('input-pos-x');
+        const inputPosY = document.getElementById('input-pos-y');
+        const inputScale = document.getElementById('input-scale');
+        const inputRotate = document.getElementById('input-rotate');
+
+        const labelPosX = document.getElementById('label-pos-x');
+        const labelPosY = document.getElementById('label-pos-y');
+        const labelScale = document.getElementById('label-scale');
+        const labelRotate = document.getElementById('label-rotate');
+
+        const btnResetSliders = document.getElementById('btn-reset-sliders');
+        
+        const designUploader = document.getElementById('design-uploader');
+        const fileInput = document.getElementById('file-input');
+        const uploaderEmpty = document.getElementById('uploader-empty');
+        const uploaderLoaded = document.getElementById('uploader-loaded');
+        const uploaderThumb = document.getElementById('uploader-thumb');
+        const uploaderFilename = document.getElementById('uploader-filename');
+        const clearDesignBtn = document.getElementById('clear-design-btn');
+        const uploadErrorBox = document.getElementById('upload-error-box');
+
+        const mockupCanvasWrapper = document.getElementById('mockup-canvas-wrapper');
+        const zoomModal = document.getElementById('zoom-modal');
+        const zoomCloseBtn = document.getElementById('zoom-close-btn');
+
+        // Update styling layout properties dynamically
+        function updateMockupUI() {
+          // Sync Slider Value Attributes
+          inputPosX.value = posX;
+          inputPosY.value = posY;
+          inputScale.value = overlayW;
+          inputRotate.value = rotAngle;
+
+          // Sync Numeric Display Labels
+          labelPosX.textContent = posX.toFixed(1) + '%';
+          labelPosY.textContent = posY.toFixed(1) + '%';
+          labelScale.textContent = overlayW.toFixed(1) + '%';
+          labelRotate.textContent = (rotAngle > 0 ? '+' : '') + rotAngle.toFixed(1) + '°';
+
+          // Apply live styling attributes to mockup canvas overlays
+          const mappedStyle = `left: ${posX}%; top: ${posY}%; width: ${overlayW}%; aspect-ratio: 1748/2480; transform: rotate(${rotAngle}deg); mix-blend-mode: multiply;`;
+          
+          mappedDesignOverlay.setAttribute('style', mappedStyle);
+          zoomDesignOverlay.setAttribute('style', mappedStyle);
+        }
+
+        // Apply a full mockup preset
+        function setMockupPreset(mockupName) {
+          selectedMockup = mockupName;
+          const preset = mapPresets[mockupName];
+          posX = preset.x;
+          posY = preset.y;
+          overlayW = preset.w;
+          rotAngle = preset.rot;
+
+          // Replace source templates
+          mainMockupBg.src = preset.bg;
+          zoomBgImg.src = preset.bg;
+
+          const activeClass = ['border-[#D98286]', 'shadow-md', 'ring-4', 'ring-[#D98286]/10', 'scale-[1.02]'];
+          const inactiveClass = ['border-[#E2D3CA]/30', 'hover:border-[#D98286]/50', 'shadow-sm'];
+
+          [btnMockup1, btnMockup2, btnMockup3].forEach(btn => {
+            btn.classList.add(...inactiveClass);
+            btn.classList.remove(...activeClass);
+          });
+
+          [badgeMockup1, badgeMockup2, badgeMockup3].forEach(badge => badge.classList.add('hidden'));
+
+          let activeBtn, activeBadge;
+          if (mockupName === 'mockup1') {
+            activeBtn = btnMockup1;
+            activeBadge = badgeMockup1;
+          } else if (mockupName === 'mockup2') {
+            activeBtn = btnMockup2;
+            activeBadge = badgeMockup2;
+          } else if (mockupName === 'mockup3') {
+            activeBtn = btnMockup3;
+            activeBadge = badgeMockup3;
+          }
+
+          if (activeBtn) {
+            activeBtn.classList.remove(...inactiveClass);
+            activeBtn.classList.add(...activeClass);
+          }
+          if (activeBadge) {
+            activeBadge.classList.remove('hidden');
+          }
+
+          updateMockupUI();
+        }
+
+        // Add Click listeners to mockup preset cards
+        if (btnMockup1) btnMockup1.addEventListener('click', () => setMockupPreset('mockup1'));
+        if (btnMockup2) btnMockup2.addEventListener('click', () => setMockupPreset('mockup2'));
+        if (btnMockup3) btnMockup3.addEventListener('click', () => setMockupPreset('mockup3'));
+
+        // Reset sliders button action
+        if (btnResetSliders) {
+          btnResetSliders.addEventListener('click', () => {
+            setMockupPreset(selectedMockup);
+          });
+        }
+
+        // Native sliding changes trigger
+        inputPosX.addEventListener('input', (e) => {
+          posX = parseFloat(e.target.value);
+          updateMockupUI();
+        });
+
+        inputPosY.addEventListener('input', (e) => {
+          posY = parseFloat(e.target.value);
+          updateMockupUI();
+        });
+
+        inputScale.addEventListener('input', (e) => {
+          overlayW = parseFloat(e.target.value);
+          updateMockupUI();
+        });
+
+        inputRotate.addEventListener('input', (e) => {
+          rotAngle = parseFloat(e.target.value);
+          updateMockupUI();
+        });
+
+        // Modal Lightbox Close/Open logic
+        if (mockupCanvasWrapper) {
+          mockupCanvasWrapper.addEventListener('click', () => {
+            zoomModal.classList.remove('opacity-0', 'pointer-events-none');
+            zoomModal.classList.add('opacity-100', 'pointer-events-auto');
+          });
+        }
+
+        function closeZoomModal() {
+          zoomModal.classList.add('opacity-0', 'pointer-events-none');
+          zoomModal.classList.remove('opacity-100', 'pointer-events-auto');
+        }
+
+        if (zoomModal) {
+          zoomModal.addEventListener('click', () => closeZoomModal());
+          const container = document.getElementById('zoom-modal-container');
+          if (container) {
+            container.addEventListener('click', (e) => {
+              e.stopPropagation();
+            });
+          }
+        }
+
+        if (zoomCloseBtn) {
+          zoomCloseBtn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            closeZoomModal();
+          });
+        }
+
+        // Drag/Drop Image Verification logic
+        function validateAndLoadFile(file) {
+          uploadErrorBox.classList.add('hidden');
+          uploadErrorBox.textContent = '';
+
+          const fileType = file.type;
+          const fileName = file.name.toLowerCase();
+          const isValidFormat = fileType === 'image/jpeg' || fileType === 'image/png' || fileName.endsWith('.jpg') || fileName.endsWith('.jpeg') || fileName.endsWith('.png');
+
+          if (!isValidFormat) {
+            uploadErrorBox.textContent = 'Kļūda: Atļauti tikai JPG vai PNG formāta attēli.';
+            uploadErrorBox.classList.remove('hidden');
+            return;
+          }
+
+          const reader = new FileReader();
+          reader.onload = (event) => {
+            if (event.target && event.target.result) {
+              const dataUrl = event.target.result;
+              const img = new Image();
+              img.onload = () => {
+                const isExact = img.width === 1748 && img.height === 2480;
+                const ratio = img.height / img.width;
+                const isCorrectRatio = Math.abs(ratio - 1.4142) < 0.055 || Math.abs(ratio - 1.41) < 0.055;
+
+                if (!isExact && !isCorrectRatio) {
+                  uploadErrorBox.textContent = `Brīdinājums: Attēla izmērs (${img.width}x${img.height}px) neatbilst precīzam A5 izmēram (1748 x 2480 px) vai proporcijai 1:1.41.`;
+                  uploadErrorBox.classList.remove('hidden');
+                }
+
+                // Update loaded states
+                uploadedDesignData = dataUrl;
+                
+                uploaderThumb.src = dataUrl;
+                uploaderFilename.textContent = file.name;
+                
+                uploaderEmpty.classList.add('hidden');
+                uploaderLoaded.classList.remove('hidden');
+                clearDesignBtn.classList.remove('hidden');
+
+                mappedDesignImg.src = dataUrl;
+                zoomDesignImg.src = dataUrl;
+              };
+              img.src = dataUrl;
+            }
+          };
+          reader.readAsDataURL(file);
+        }
+
+        if (designUploader) {
+          designUploader.addEventListener('click', () => {
+            fileInput.click();
+          });
+
+          designUploader.addEventListener('dragover', (e) => {
+            e.preventDefault();
+            designUploader.classList.remove('border-[#E2D3CA]/50', 'bg-[#FAF9F8]/50');
+            designUploader.classList.add('border-[#D98286]', 'bg-[#D98286]/5');
+          });
+
+          designUploader.addEventListener('dragleave', () => {
+            designUploader.classList.add('border-[#E2D3CA]/50', 'bg-[#FAF9F8]/50');
+            designUploader.classList.remove('border-[#D98286]', 'bg-[#D98286]/5');
+          });
+
+          designUploader.addEventListener('drop', (e) => {
+            e.preventDefault();
+            designUploader.classList.add('border-[#E2D3CA]/50', 'bg-[#FAF9F8]/50');
+            designUploader.classList.remove('border-[#D98286]', 'bg-[#D98286]/5');
+
+            const file = e.dataTransfer.files[0];
+            if (file) {
+              validateAndLoadFile(file);
+            }
+          });
+        }
+
+        if (fileInput) {
+          fileInput.addEventListener('change', (e) => {
+            const file = e.target.files[0];
+            if (file) {
+              validateAndLoadFile(file);
+            }
+          });
+        }
+
+        if (clearDesignBtn) {
+          clearDesignBtn.addEventListener('click', (e) => {
+            e.stopPropagation();
+
+            uploadedDesignData = null;
+            fileInput.value = '';
+
+            uploaderEmpty.classList.remove('hidden');
+            uploaderLoaded.classList.add('hidden');
+            clearDesignBtn.classList.add('hidden');
+            uploadErrorBox.classList.add('hidden');
+
+            const defaultCover = '/src/assets/images/notebook_cover_1781435812496.jpg';
+            mappedDesignImg.src = defaultCover;
+            zoomDesignImg.src = defaultCover;
+          });
+        }
+
+        // Set Dynamic Footer Year
+        const footerYear = document.getElementById('footer-year');
+        if (footerYear) {
+          footerYear.textContent = new Date().getFullYear();
+        }
+
+        // Load Preset default 1 on initialization
+        setMockupPreset('mockup1');
+      });
+    </script>
+  </body>
+</html>
